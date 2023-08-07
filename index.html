@@ -6,9 +6,9 @@
      <title>Random User</title>
      <script src="https://cdn.tailwindcss.com"></script>
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <script>
 
-     const fetchData = () => {
+     <script>
+          const fetchData = () => {
                $.get("https://jsonplaceholder.typicode.com/users", function(users) {
 
                     const randomIndex = Math.floor(Math.random() * users.length);
@@ -25,6 +25,7 @@
           }
      </script>
 </head>
+
 <style>
      *{
           font-family: 'Poppins', Courier, monospace;
@@ -43,22 +44,18 @@
      .email{
           color: rgb(44, 197, 110);
      }
-     
-
 </style>
 
 <body>
      <div class="h-screen w-screen bg-green-200 items-center p-10 flex justify-center text-2xl flex-col">
+
           <div class="flex justify-center text-4xl">
                <h1>Random Users generator using <span id="ajx">jQuery & ajax api</span>  placeholder</h1>
           </div>
           
-               <h2 class="m-10 text-green-700"><span id="UserName"></span> </h2>
-               <button class="rounded-full bg-green-400 py-3 px-10 text-white bol" onclick="fetchData()">Random User</button>
-          
-     </div>
-     
-    
+          <h2 class="m-10 text-green-700"><span id="UserName"></span> </h2>
+          <button class="rounded-full bg-green-400 py-3 px-10 text-white bol" onclick="fetchData()">Random User</button>
 
+     </div>
 </body>
 </html>
